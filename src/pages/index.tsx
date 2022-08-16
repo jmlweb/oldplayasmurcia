@@ -1,13 +1,2 @@
-import { GetStaticProps } from 'next';
-
+export { getStaticProps } from '@/scenes/Home/getStaticProps';
 export { default } from '@/scenes/Home/Home.scene';
-
-import { getBeachesList } from '@/data';
-
-export const getStaticProps: GetStaticProps = async () => {
-  const data = await getBeachesList();
-  console.log(data);
-  return {
-    props: {},
-  };
-};

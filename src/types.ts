@@ -1,7 +1,7 @@
 import { NextPage } from 'next';
 import { ReactElement } from 'react';
 
-export type NextPageWithLayout = NextPage & {
+export type NextPageWithLayout<P = {}> = NextPage<P> & {
   getLayout?: (page: ReactElement) => ReactElement;
 };
 
@@ -24,6 +24,7 @@ export interface Beach {
   sea: 1 | 0;
   promenade: boolean;
   accessType?: string;
+  blueFlag: boolean;
   accesible: boolean;
   pics: ReadonlyArray<string>;
 }
@@ -60,6 +61,7 @@ export type SimpleBeach = Pick<
   | 'nudist'
   | 'sea'
   | 'promenade'
+  | 'blueFlag'
   | 'accesible'
 > & {
   featuredPic?: string;

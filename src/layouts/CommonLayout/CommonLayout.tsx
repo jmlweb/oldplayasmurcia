@@ -1,7 +1,9 @@
 import Image from 'next/image';
 import { FC, ReactElement } from 'react';
 
-import styles from './CommonLayout.module.css';
+import Logo from '@/components/Logo';
+
+import AuxBlock from './AuxBlock';
 
 interface CommonLayoutProps {
   children: ReactElement;
@@ -9,21 +11,25 @@ interface CommonLayoutProps {
 
 export const CommonLayout: FC<CommonLayoutProps> = ({ children }) => {
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>{children}</main>
+    <div className="grid min-h-screen grid-rows-[auto_1fr_auto]">
+      <AuxBlock as="header">
+        <Logo />
+      </AuxBlock>
 
-      <footer className={styles.footer}>
+      <main className="py-3">{children}</main>
+
+      <AuxBlock as="footer">
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
         >
           Powered by{' '}
-          <span className={styles.logo}>
+          <span>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
-      </footer>
+      </AuxBlock>
     </div>
   );
 };

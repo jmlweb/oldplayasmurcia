@@ -1,8 +1,14 @@
 import Head from 'next/head';
 
+import BeachesGrid from '@/components/BeachesGrid/BeachesGrid';
 import { NextPageWithLayout } from '@/types';
 
-const Home: NextPageWithLayout = () => (
+import { PropsContextValue, PropsProvider } from './context';
+
+const Home: NextPageWithLayout<PropsContextValue> = ({
+  accesibleBeaches,
+  featuredBeaches,
+}) => (
   <>
     <Head>
       <title>Playas Murcia</title>
@@ -12,7 +18,13 @@ const Home: NextPageWithLayout = () => (
       />
       <link rel="icon" href="/favicon.ico" />
     </Head>
-    <h1>PlayasMurcia</h1>
+    <PropsProvider
+      accesibleBeaches={accesibleBeaches}
+      featuredBeaches={featuredBeaches}
+    >
+      <BeachesGrid title="Playas destacadas" items={featuredBeaches} />
+      <BeachesGrid title="Playas accesibles" items={accesibleBeaches} />
+    </PropsProvider>
   </>
 );
 

@@ -19,6 +19,7 @@ const getBeachesList = () => {
           sea,
           promenade,
           accesible,
+          blueFlag,
           pics,
         }) => ({
           name,
@@ -31,7 +32,11 @@ const getBeachesList = () => {
           sea,
           promenade,
           accesible,
-          featuredPic: pics && pics.length > 0 ? pics[0] : undefined,
+          blueFlag,
+          ...(pics &&
+            pics.length > 0 && {
+              featuredPic: pics[0],
+            }),
         }),
       ),
     );

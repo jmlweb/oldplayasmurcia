@@ -1,8 +1,11 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const withPreact = require('next-plugin-preact');
+
+module.exports = withPreact({
+  images: {
+    domains: ['www.murciaturistica.es'],
+  },
   poweredByHeader: false,
   reactStrictMode: true,
   swcMinify: true,
-};
-
-module.exports = nextConfig;
+});
