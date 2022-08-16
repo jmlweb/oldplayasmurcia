@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.15](https://github.com/jmlweb/playasmurcia/compare/v0.2.14...v0.2.15) (2022-08-16)
+
+
+### Features
+
+* basic beaches lists ([f2a74e9](https://github.com/jmlweb/playasmurcia/commit/f2a74e9cbbae68ae7f30c7d995a10b5a08e56bd8))
+* first commit ([73ea3db](https://github.com/jmlweb/playasmurcia/commit/73ea3db2894f0034808ae59d1bf6df320abc27ba))
+
+
+### Bug Fixes
+
+* merge ([e8e506d](https://github.com/jmlweb/playasmurcia/commit/e8e506dedc47de3e3f011297c5e4666f126448b6))
+
 ### [0.2.14](https://github.com/jmlweb/playasmurcia/compare/v0.2.13...v0.2.14) (2022-08-13)
 
 ### [0.2.13](https://github.com/jmlweb/playasmurcia/compare/v0.2.12...v0.2.13) (2022-08-13)
