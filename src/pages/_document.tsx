@@ -11,6 +11,7 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
             rel="stylesheet"
           />
+          <link rel="preconnect" href="http://www.murciaturistica.es" />
         </Head>
         <body>
           <Main />

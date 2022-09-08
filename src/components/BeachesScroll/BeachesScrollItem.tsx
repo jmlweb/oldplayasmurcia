@@ -5,10 +5,7 @@ import { FC, MouseEventHandler, ReactNode, useMemo } from 'react';
 import ItemCard from '@/components/ItemCard';
 import { SimpleBeach } from '@/types';
 
-type Tag = keyof Pick<
-  SimpleBeach,
-  'blueFlag' | 'accesible' | 'promenade' | 'nudist'
->;
+type Tag = keyof Pick<SimpleBeach, 'accesible' | 'promenade' | 'nudist'>;
 
 const TAGS: Record<Tag, string> = {
   accesible: 'Accesible',
