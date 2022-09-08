@@ -5,10 +5,12 @@ module.exports = {
     fontFamily: {
       alternate: ['Bebas Neue', 'sans-serif'],
     },
-    gridTemplateColumns: {
-      beaches: 'repeat( auto-fit, minmax(20rem, 1fr) )',
+    extend: {
+      gridTemplateColumns: {
+        beaches: 'repeat( auto-fit, minmax(20rem, 1fr) )',
+        features: 'repeat( auto-fit, minmax(10rem, 1fr) )',
+      },
     },
-    extend: {},
   },
-  plugins: [],
+  plugins: [require('tailwind-scrollbar-hide')],
 };

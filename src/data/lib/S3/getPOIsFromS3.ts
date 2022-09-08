@@ -6,7 +6,7 @@ let cachedPromises: Record<string, Promise<POIs>> = {};
 
 const getPOIsFromS3 = (key: string) => {
   if (!cachedPromises[key]) {
-    cachedPromises[key] = getFromS3<POIs>(`/pois/${key}.json`);
+    cachedPromises[key] = getFromS3<POIs>(`pois/${key}.json`);
   }
   return cachedPromises[key];
 };

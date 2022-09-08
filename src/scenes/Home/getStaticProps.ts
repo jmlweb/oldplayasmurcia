@@ -1,16 +1,39 @@
 import { GetStaticProps } from 'next';
 
-import { getAccesibleBeaches, getFeaturedBeaches } from '@/data';
+import {
+  getAccesibleBeaches,
+  getBeachesWithPromenade,
+  getFeaturedBeaches,
+  getNudistBeaches,
+} from '@/data';
+import { BeachesList } from '@/types';
 
-export const getStaticProps: GetStaticProps = async () => {
-  const [accesibleBeaches, featuredBeaches] = await Promise.all([
+export interface Props {
+  accesibleBeaches: BeachesList;
+  featuredBeaches: BeachesList;
+  beachesWithPromenade: BeachesList;
+  nudistBeaches: BeachesList;
+}
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const [
+    accesibleBeaches,
+    beachesWithPromenade,
+    featuredBeaches,
+    nudistBeaches,
+  ] = await Promise.all([
     getAccesibleBeaches(),
+    getBeachesWithPromenade(),
     getFeaturedBeaches(),
+    getNudistBeaches(),
   ]);
   return {
     props: {
       accesibleBeaches,
+      beachesWithPromenade,
       featuredBeaches,
+      nudistBeaches,
     },
+    revalidate: 12 * 60 * 60,
   };
 };

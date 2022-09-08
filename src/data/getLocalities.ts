@@ -1,12 +1,16 @@
-import getBeachesList from './getBeachesList';
+import getBeachesList from './lib/getBeachesList';
+
+let cachedPromise: Promise<ReadonlyArray<string>>;
+
+const unique = <T>(x: T[]) => Array.from(new Set(x));
 
 const getLocalities = async () => {
-  const store = new Set<string>();
-  const beachesList = await getBeachesList();
-  beachesList.forEach(({ locality }) => {
-    store.add(locality);
-  });
-  return Array.from(store);
+  if (!cachedPromise) {
+    cachedPromise = getBeachesList().then((beachesList) =>
+      unique(beachesList.map(({ locality }) => locality)),
+    );
+  }
+  return cachedPromise;
 };
 
 export default getLocalities;

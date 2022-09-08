@@ -16,7 +16,7 @@ export const CommonLayout: FC<CommonLayoutProps> = ({ children }) => {
         <Logo />
       </AuxBlock>
 
-      <main className="py-3">{children}</main>
+      <main className="max-w-screen overflow-x-hidden py-3">{children}</main>
 
       <AuxBlock as="footer">
         <a

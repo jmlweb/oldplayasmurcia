@@ -34,14 +34,21 @@
     }
   },
   "dependencies": {
+    "@plaiceholder/next": "^2.4.0",
     "aws-sdk": "^2.1194.0",
+    "leaflet": "^1.8.0",
     "next": "^12.2.5",
     "next-plugin-preact": "^3.0.7",
+    "plaiceholder": "^2.4.0",
     "preact": "^10.10.2",
     "preact-render-to-string": "^5.2.1",
     "react": "npm:@preact/compat",
     "react-dom": "npm:@preact/compat",
-    "react-ssr-prepass": "npm:preact-ssr-prepass"
+    "react-leaflet": "^4.0.2",
+    "react-ssr-prepass": "npm:preact-ssr-prepass",
+    "react-use-draggable-scroll": "^0.4.5",
+    "sharp": "^0.30.7",
+    "tailwind-scrollbar-hide": "^1.1.7"
   },
   "devDependencies": {
     "@babel/core": "^7.18.10",
@@ -62,6 +69,7 @@
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^14.4.3",
     "@types/jest": "^28.1.6",
+    "@types/leaflet": "^1.7.11",
     "@types/node": "18.7.3",
     "@types/react": "18.0.17",
     "@types/react-dom": "18.0.6",

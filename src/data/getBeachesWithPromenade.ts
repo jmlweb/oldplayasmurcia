@@ -5,10 +5,10 @@ import queryBeaches from './lib/queryBeaches';
 
 let cachedPromise: Promise<ReadonlyArray<SimpleBeach>>;
 
-const getAccesibleBeaches = () => {
+const getBeachesWithPromenade = () => {
   if (!cachedPromise) {
     cachedPromise = queryBeaches({
-      filter: ({ accesible }) => accesible,
+      filter: ({ promenade }) => promenade,
       sort: defaultSort,
       limit: 10,
     });
@@ -16,4 +16,4 @@ const getAccesibleBeaches = () => {
   return cachedPromise;
 };
 
-export default getAccesibleBeaches;
+export default getBeachesWithPromenade;

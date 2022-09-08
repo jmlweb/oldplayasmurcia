@@ -5,7 +5,15 @@ export type NextPageWithLayout<P = {}> = NextPage<P> & {
   getLayout?: (page: ReactElement) => ReactElement;
 };
 
-export interface Beach {
+export interface EnhancedPic {
+  src: string;
+  blurred?: string;
+  width?: number;
+  height?: number;
+  type?: string;
+}
+
+export interface BeachPart {
   name: string;
   slug: string;
   address?: string;
@@ -26,6 +34,10 @@ export interface Beach {
   accessType?: string;
   blueFlag: boolean;
   accesible: boolean;
+  pics: ReadonlyArray<string> | ReadonlyArray<EnhancedPic>;
+}
+
+export interface Beach extends BeachPart {
   pics: ReadonlyArray<string>;
 }
 
@@ -46,8 +58,9 @@ export interface POI {
 
 export type POIs = ReadonlyArray<POI>;
 
-export interface BeachDetail extends Beach {
+export interface BeachDetail extends BeachPart {
   pois: POIs;
+  pics: ReadonlyArray<EnhancedPic>;
 }
 
 export type SimpleBeach = Pick<
@@ -64,7 +77,7 @@ export type SimpleBeach = Pick<
   | 'blueFlag'
   | 'accesible'
 > & {
-  featuredPic?: string;
+  featuredPic?: EnhancedPic | null;
 };
 
 export type BeachesList = ReadonlyArray<SimpleBeach>;
