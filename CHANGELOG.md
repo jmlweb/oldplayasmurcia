@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.16](https://github.com/jmlweb/playasmurcia/compare/v0.2.15...v0.2.16) (2022-09-08)
+
+
+### Features
+
+* implement details ([efcf2c3](https://github.com/jmlweb/playasmurcia/commit/efcf2c3e8a997c89666ced0ad6cfdd4506885226))
+* upgrade ([19074eb](https://github.com/jmlweb/playasmurcia/commit/19074eb2e51952310fb5c6b4cd5c2caa6df05001))
+
 ### [0.2.15](https://github.com/jmlweb/playasmurcia/compare/v0.2.14...v0.2.15) (2022-08-16)
 
 
