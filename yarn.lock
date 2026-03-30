@@ -2237,7 +2237,7 @@
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-actions@6.5.10", "@storybook/addon-actions@^6.5.10":
+"@storybook/addon-actions@6.5.10":
   version "6.5.10"
   resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-6.5.10.tgz#83ec807a899e0412cf98037647f256c45cc32bf5"
   integrity sha512-vpCnEu81fmtYzOf0QsRYoDuf9wXgVVl2VysE1dWRebRhIUDU0JurrthTnw322e38D4FzaoNGqZE7wnBYBohzZA==
@@ -2261,6 +2261,11 @@
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
     uuid-browser "^3.1.0"
+
+"@storybook/addon-actions@^9.0.8":
+  version "9.0.8"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-9.0.8.tgz#0a9a044c31dd20e5aaa22eb0cb4e36771f40def8"
+  integrity sha512-LFePu7PPnWN0Il/uoUpmA5T0J0C7d6haJIbg0pXrjxW2MQVSYXE4S4LSUz8fOImltBDV3xAl6tLPYHFj6VcrOA==
 
 "@storybook/addon-backgrounds@6.5.10":
   version "6.5.10"
@@ -12410,7 +12415,7 @@ react-docgen@^5.0.0:
     node-dir "^0.1.10"
     strip-indent "^3.0.0"
 
-"react-dom@npm:@preact/compat", "react@npm:@preact/compat":
+"react-dom@npm:@preact/compat":
   version "17.1.1"
   resolved "https://registry.yarnpkg.com/@preact/compat/-/compat-17.1.1.tgz#60a657ffe7d9830ceefc7ae44fcfce589c5acf23"
   integrity sha512-OjQJ6oVcjFTiKWs4MIoE/cORFFGhqnt1RO0uxGNAFUglBMPNahMDJyX5w+qEOEaOpaNTLM1L3ixc2bFEpxgs3A==
@@ -12484,6 +12489,11 @@ react-use-draggable-scroll@^0.4.5:
   version "0.4.5"
   resolved "https://registry.yarnpkg.com/react-use-draggable-scroll/-/react-use-draggable-scroll-0.4.5.tgz#48ca1d6f5815bfaa8bf72a0d6cacf626a3c9929d"
   integrity sha512-hx5VaqCP0NhLQO0mcSjvkikJ0riYvx0ReKGqDznCQvoERF8JycrC8Fh0Y49nIZyTWpycj/XorhRBwmpDlyCBuw==
+
+"react@npm:@preact/compat":
+  version "17.1.1"
+  resolved "https://registry.yarnpkg.com/@preact/compat/-/compat-17.1.1.tgz#60a657ffe7d9830ceefc7ae44fcfce589c5acf23"
+  integrity sha512-OjQJ6oVcjFTiKWs4MIoE/cORFFGhqnt1RO0uxGNAFUglBMPNahMDJyX5w+qEOEaOpaNTLM1L3ixc2bFEpxgs3A==
 
 read-cache@^1.0.0:
   version "1.0.0"
