@@ -3,9 +3,16 @@ import { render, screen, within } from '@testing-library/react';
 import getLayout from '@/layouts/CommonLayout';
 import IndexPage from '@/pages';
 
+const mockProps = {
+  accesibleBeaches: [],
+  featuredBeaches: [],
+  beachesWithPromenade: [],
+  nudistBeaches: [],
+};
+
 describe('IndexPage', () => {
   test('should render the home scene wrapped with the common layout', async () => {
-    render(getLayout(<IndexPage />));
+    render(getLayout(<IndexPage {...mockProps} />));
 
     const footer = screen.getByRole('contentinfo');
     expect(footer).toHaveTextContent('Powered by');
