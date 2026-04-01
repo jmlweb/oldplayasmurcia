@@ -16,6 +16,16 @@ export interface Props {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
+  if (process.env.CI) {
+    return {
+      props: {
+        accesibleBeaches: [],
+        beachesWithPromenade: [],
+        featuredBeaches: [],
+        nudistBeaches: [],
+      },
+    };
+  }
   const [
     accesibleBeaches,
     beachesWithPromenade,

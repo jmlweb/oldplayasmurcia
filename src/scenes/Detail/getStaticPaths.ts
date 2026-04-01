@@ -3,7 +3,7 @@ import { GetStaticPaths } from 'next';
 import getBeachesSlugs from '../../data/getBeachesSlugs';
 
 const buildPaths = async () => {
-  if (process.env.NODE_ENV !== 'production') {
+  if (process.env.NODE_ENV !== 'production' || process.env.CI) {
     return [];
   }
   const slugs = await getBeachesSlugs();

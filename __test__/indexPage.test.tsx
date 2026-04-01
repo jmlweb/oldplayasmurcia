@@ -1,22 +1,25 @@
-import { render, screen, within } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 
 import getLayout from '@/layouts/CommonLayout';
 import IndexPage from '@/pages';
 
+const mockProps = {
+  accesibleBeaches: [],
+  featuredBeaches: [],
+  beachesWithPromenade: [],
+  nudistBeaches: [],
+};
+
 describe('IndexPage', () => {
   test('should render the home scene wrapped with the common layout', async () => {
-    render(getLayout(<IndexPage />));
-
-    const footer = screen.getByRole('contentinfo');
-    expect(footer).toHaveTextContent('Powered by');
-
-    const logo = screen.getByAltText('Vercel Logo');
-    expect(logo).toBeInTheDocument();
+    render(getLayout(<IndexPage {...mockProps} />));
 
     const main = screen.getByRole('main');
+    expect(main).toBeInTheDocument();
 
-    const grid = within(main).getByTestId('cards');
-    const links = within(grid).getAllByRole('link');
-    expect(links).toHaveLength(4);
+    expect(screen.getByText('Playas destacadas')).toBeInTheDocument();
+    expect(screen.getByText('Playas accesibles')).toBeInTheDocument();
+    expect(screen.getByText('Playas nudistas')).toBeInTheDocument();
+    expect(screen.getByText('Playas para pasear')).toBeInTheDocument();
   });
 });
